@@ -1,0 +1,24 @@
+import "./App.css";
+import { AnimatedGridMainBackground } from "./components/animated-ui/AnimatedGridMainBackground";
+import { MobileColumn } from "./components/MobileColumn";
+import { VentoGrid } from "./components/VentoGrid";
+import { SectionContextProvider } from "./context/SectionContextProvider";
+import { myInfo } from "./assets/data";
+
+function App() {
+  return (
+    <SectionContextProvider>
+      <AnimatedGridMainBackground>
+        <VentoGrid />
+        <MobileColumn />
+        <div className="text-xs pb-4">
+          <p>
+            Made by <span className="italic text-teal-200">{myInfo.alias}</span>
+          </p>
+        </div>
+      </AnimatedGridMainBackground>
+    </SectionContextProvider>
+  );
+}
+
+export default App;
