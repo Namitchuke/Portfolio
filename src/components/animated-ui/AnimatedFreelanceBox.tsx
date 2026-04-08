@@ -18,7 +18,7 @@ export const AnimatedFreelanceBox = ({
 }: AnimatedFreelanceBoxProps) => {
   return (
     <AnimatedBox className="col-span-4 row-span-3 p-4">
-      <h3 className="text-lg font-semibold text-zinc-100">Freelance</h3>
+      <h3 className="text-lg font-semibold text-zinc-100">Projects</h3>
       <div className="mt-1 space-y-1">
         {freelanceJobs.map((job, index) => (
           <div key={index} className="rounded-lg">
