@@ -1,5 +1,5 @@
 import { BarChart3, Gamepad2, Plane, Trophy } from "lucide-react";
-import { SiFigma, SiJira, SiN8N, SiPostgresql, SiPython, SiVuedotjs } from "react-icons/si";
+import { SiFigma, SiJira, SiN8N, SiPostgresql, SiPython } from "react-icons/si";
 import type { Experience } from "../lib/types";
 
 export const myInfo = {
@@ -48,7 +48,7 @@ export const myInfo = {
       },
       {
         label: "₹6 Lakh",
-        value: "EU LangSchool Revenue (1mo)",
+        value: "EU LangSchool Revenue (in 1st month )",
       },
       {
         label: "24h → 5m",
@@ -111,12 +111,14 @@ export const myInfo = {
         project: "LeapPlan AI",
         description:
           "Built a full-stack AI decision engine, reducing evaluation time from 24h into 5 minutes.",
+        duration: "Jan 2026 - Present",
         skills: ["Python", "FastAPI", "Claude Code"],
       },
       {
         project: "Articulate AI",
         description:
           "Built an n8n pipeline to eliminate manual documentation overhead.",
+        duration: "Feb 2026 - Present",
         skills: ["n8n", "LLM Prompting", "Gemini"],
       },
     ],

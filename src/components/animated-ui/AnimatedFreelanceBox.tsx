@@ -5,7 +5,7 @@ export type FreelanceJob = {
   project: string;
   client?: string;
   description: string;
-  duration: string;
+  duration?: string;
   skills: string[];
 };
 
