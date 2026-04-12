@@ -10,9 +10,8 @@ export const AnimatedEducationHeaderBox = () => {
           <GraduationCap className="size-8 text-zinc-400" /> My Education
         </h2>
         <p className="text-zinc-300">
-          My educational background has provided me with a solid foundation of
-          software engineering principles. I have completed my Bachelor degree
-          and am in seek of a Masters.
+          My education shaped how I approach product challenges: with data,
+          systems thinking, and a focus on measurable impact.
         </p>
       </div>
     </AnimatedBox>
