@@ -153,14 +153,14 @@ export const myInfo = {
     {
       title: "Costo Coffee Sales Dashboard",
       description:
-        "150k transactions,",
+        "Interactive dashboard visualizing coffee sales metrics, regional trends, and business KPIs.",
       technologies: ["MySQL", "Power BI"],
       githubLink: "https://github.com/Namitchuke/Costo-Coffee-Sales-Performance-Dashboard",
       image: "/projects/Costo_Coffee.jpg",
     },
     {
       title: "Zomato Spatial EDA",
-      description: "Geographic mod that adds oxifier item to the game.",
+      description: "Zomato data deep-dive: restaurant performance, customer preferences, and growth opportunities.",
       technologies: ["Python", "Pandas", "Matplotlib", "Seaborn"],
       githubLink: "https://github.com/Namitchuke/Zomato-EDA",
       image: "/projects/zomato.jpg",
