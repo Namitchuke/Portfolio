@@ -1,6 +1,6 @@
 # Namit Portfolio
 
-My personal [Product Manager/Analyst 🔗](https://namit-portfolio.vercel.app/)  
+My personal [Product Manager/Analyst 🔗](https://namitchuke-portfolio.vercel.app/) 
 Written with **React**, **Typescript**, and **Framer Motion**.  
 It is made in English only for now.  
 Responsive!  
