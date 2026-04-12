@@ -129,7 +129,7 @@ export const myInfo = {
       institution: "NIT Bhopal",
       location: "Bhopal, India",
       dateRange: "2022 - 2026",
-      topics: [],
+      topics: ["Product thinking", "Data analysis"],
       current: true,
     },
     {
@@ -137,7 +137,7 @@ export const myInfo = {
       institution: "IIM Udaipur",
       location: "Udaipur, India",
       dateRange: "2025",
-      topics: [],
+      topics: ["Business case analysis", "Strategic frameworks"],
       current: false,
     },
   ],
