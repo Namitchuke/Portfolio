@@ -5,7 +5,7 @@ import type { Experience } from "../lib/types";
 export const myInfo = {
   name: "Namit Nitin Chuke",
   alias: "Namit",
-  title: "Product Manager | Data Driven",
+  title: "Product Strategy. Data Analyst. Obsessive Builder",
   image: "/personal.jpg",
   skills: [
     {
