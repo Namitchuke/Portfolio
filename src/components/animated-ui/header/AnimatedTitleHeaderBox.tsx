@@ -11,8 +11,8 @@ export const AnimatedTitleHeaderBox = () => {
         <h1 className=" text-4xl font-medium  mt-5 leading-tight">
           Hi, I'm {myInfo.alias}.
         </h1>
-        <p className="text-4xl font-medium leading-tight text-zinc-400 mb-10">
-          I'm a {myInfo.title}.
+        <p className="text-zinc-400 text-4xl font-medium leading-tight mb-10">
+          {myInfo.title}.
         </p>
         <button
           className="flex items-center gap-1 text-teal-300 hover:underline"
