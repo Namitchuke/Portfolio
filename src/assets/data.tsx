@@ -40,7 +40,7 @@ export const myInfo = {
     },
   ],
   about_me: {
-    head: "Product Builder & Data Analyst. I obsess over growth funnels, KPIs, and the decisions that move them. I turn ambiguity into actionable strategy",
+    head: "Product Builder & Data Analyst. I obsess over growth funnels, KPIs, and the decisions that move them. I turn ambiguity into actionable strategy.",
     snapshot: [
       {
         label: "28% → 46%",
