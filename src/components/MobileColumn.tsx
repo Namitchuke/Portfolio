@@ -100,7 +100,7 @@ const ContentBox = () => {
     return (
       <>
         <AnimatedHeaderBox />
-        <AnimatedEducationBox education={myInfo.studies[0]} />
+        <AnimatedEducationBox />
         <div className="flex w-full gap-4">
           <AnimatedSocialsBox />
         </div>

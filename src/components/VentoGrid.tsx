@@ -81,7 +81,7 @@ const SecondaryInformationBox = () => {
   }
 
   if (activeSection === "education") {
-    return <AnimatedEducationBox education={myInfo.studies[0]} />;
+    return <AnimatedEducationBox />;
   }
 
   return <AnimatedSkillsHobbiesBox />;
