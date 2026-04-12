@@ -40,7 +40,7 @@ export const myInfo = {
     },
   ],
   about_me: {
-    head: "Product Strategist & Engineer. I specialize in bridging the gap between deep technical code and actionable product impact. I don't just build tasks; I design systems for growth and revenue scaling.",
+    head: "Product Builder & Data Analyst. I obsess over growth funnels, KPIs, and the decisions that move them. I turn ambiguity into actionable strategy",
     snapshot: [
       {
         label: "28% → 46%",
