@@ -48,7 +48,7 @@ export const myInfo = {
     },
   ],
   about_me: {
-    head: "Growth analyst at Leap Finance. I launch acquisition channels, fix lead quality, and turn funnel data into decisions that move revenue.",
+    head: "Growth analyst at Leap Finance. I find funnel leaks, launch acquisition channels and turn data into revenue.",
     snapshot: [
       {
         label: "₹47L",
@@ -92,7 +92,7 @@ export const myInfo = {
   },
   experience: {
     intro:
-      "I work where data meets execution: diagnosing funnels, launching programs and building the systems that let teams scale.",
+      "Where data meets execution: funnels, 0→1 launches and the systems behind them.",
     work: [
       {
         title: "Program Associate",
@@ -100,7 +100,7 @@ export const myInfo = {
         location: "Bengaluru, India",
         dateRange: "Jul 2026 - Present",
         description:
-          "Built a counsellor marketplace that hit 20% lead-to-attendance vs 11% BAU and ₹36L in month-one enrollments. Launched masterclasses as an acquisition channel, cutting CAC 58% and CPL 63% for ₹47L revenue. Fixed Meta lead quality, lifting lead-to-relevant from 12% to 37%.",
+          "₹36L month-one enrollments from a 0→1 counsellor marketplace (20% L2A vs 11% BAU). ₹47L from masterclasses at 58% lower CAC. Lead-to-relevant 12% → 37%.",
         skills: ["Growth Strategy", "Performance Marketing", "0→1 Launch"],
         current: true,
       },
@@ -110,28 +110,25 @@ export const myInfo = {
         location: "Bengaluru, India",
         dateRange: "Jan 2026 - Jun 2026",
         description:
-          "Owned the EU bottom-of-funnel: a pan-India branch tracker took branch performance from 32% to 80%+ and NPS from 7.2 to 8.4. Launched EU LangSchool, growing attach rate from 10% to 26% with ₹12L in month one.",
+          "Branch performance 32% → 80%+ and NPS 7.2 → 8.4. EU LangSchool attach rate 10% → 26%, ₹12L in month one.",
         skills: ["BranchOps", "0→1 Launch"],
       },
     ] satisfies Experience[],
     freelance: [
       {
         project: "Sales Analytics System",
-        description:
-          "Automated funnel reporting in Sheets and Apps Script (ad-level KPIs, stage-gated funnel, deduplicated lead sync), cutting reporting time 70%.",
+        description: "−70% reporting time with automated funnel dashboards.",
         skills: ["Apps Script", "Google Sheets", "Python"],
       },
       {
         project: "LeapPlan AI",
-        description:
-          "LLM planner turning counselling inputs into personalized study-abroad plans in 3–5 minutes, down from 24 hours.",
+        description: "Study-abroad plans in 3–5 min, down from 24 hrs.",
         skills: ["FastAPI", "React", "Gemini"],
       },
     ] satisfies FreelanceJob[],
   },
   education: {
-    intro:
-      "My education shaped how I approach growth problems: with data, systems thinking, and a focus on measurable impact.",
+    intro: "An engineering foundation with a business lens.",
   },
   studies: [
     {
