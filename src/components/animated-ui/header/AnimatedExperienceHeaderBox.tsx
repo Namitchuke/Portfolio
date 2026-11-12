@@ -1,7 +1,7 @@
 import { BriefcaseBusiness } from "lucide-react";
 import { AnimatedBox } from "../AnimatedBox";
+import { myInfo } from "../../../assets/data";
 
-//TODO: get text from info
 export const AnimatedExperienceHeaderBox = () => {
   return (
     <AnimatedBox className="col-span-5 row-span-2 p-0">
@@ -9,11 +9,7 @@ export const AnimatedExperienceHeaderBox = () => {
         <h2 className="text-4xl font-medium leading-tight flex items-center gap-3">
           <BriefcaseBusiness className="size-8 text-zinc-400" /> Experience
         </h2>
-        <p className="text-zinc-300">
-          I have hands-on experience building products and optimizing growth systems, working across startups and high-impact teams
-          <br />
-          Here are some of my professional experiences:
-        </p>
+        <p className="text-zinc-300">{myInfo.experience.intro}</p>
       </div>
     </AnimatedBox>
   );

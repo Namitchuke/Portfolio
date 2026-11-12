@@ -10,7 +10,7 @@ export const AnimatedSkillsBox = () => {
     <AnimatedBox className="col-span-5 row-span-2 grid grid-cols-4 gap-4">
       <div className="col-span-2 flex items-center justify-center">
         <motion.h2 whileHover={{ scale: 1.1 }} className="font-bold text-xl">
-          TECK STACK
+          TECH STACK
         </motion.h2>
       </div>
       {myInfo.skills.map((skill, i) => (

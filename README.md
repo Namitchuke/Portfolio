@@ -1,29 +1,20 @@
-# Namit Portfolio
+# Namit Chuke: Portfolio
 
-My personal [Product Manager/Analyst 🔗](https://namitchuke-portfolio.vercel.app/) 
-Written with **React**, **Typescript**, and **Framer Motion**.  
-It is made in English only for now.  
-Responsive!  
-It contains these sections:
+My personal portfolio, live at **[namitchuke-portfolio.vercel.app](https://namitchuke-portfolio.vercel.app/)**.
 
-- About me
-- Services
-- Skills
-- Experience
-- Education
-- Languages
-- Contact Info
+Built with **React**, **TypeScript**, **Tailwind CSS** and **Framer Motion**. Fully responsive.
 
-## How to run?
+Sections: Home · About · Experience · Education (with certifications) · Projects · Contact
 
-1. Download / Clone the repository
+All text lives in [`src/assets/data.tsx`](src/assets/data.tsx), so content updates don't need component changes.
+
+## Run locally
 
 ```bash
-git clone https://github.com/Namitchuke/Namit-portfolio-main
-```
-
-2. Open a terminal in the location and run
-
-```bash
+git clone https://github.com/Namitchuke/Portfolio
+cd Portfolio
+npm install --legacy-peer-deps
 npm run dev
 ```
+
+`--legacy-peer-deps` is needed until `eslint-plugin-react-hooks` supports ESLint 10.

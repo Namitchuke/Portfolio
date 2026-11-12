@@ -15,12 +15,14 @@ export const AnimatedRightLeftBox = ({
       <button
         className="flex-1 flex justify-center items-center rounded-l hover:bg-zinc-700 transition-colors cursor-pointer"
         onClick={onLeftClick}
+        aria-label="Previous project"
       >
         <ChevronLeft className="size-8 my-2" />
       </button>
       <button
         className="flex-1 flex justify-center items-center rounded-r hover:bg-zinc-700 transition-colors cursor-pointer"
         onClick={onRightClick}
+        aria-label="Next project"
       >
         <ChevronRight className="size-8 my-2" />
       </button>

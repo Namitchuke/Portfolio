@@ -1,4 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
+import { useEffect } from "react";
 
 export type AnimatedModalProps = {
   visible: boolean;
@@ -17,7 +18,15 @@ export const AnimatedModal = (props: AnimatedModalProps) => {
 const Modal = ({
   setVisible,
   children,
-}: Exclude<AnimatedModalProps, "visible">) => {
+}: Omit<AnimatedModalProps, "visible">) => {
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setVisible(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [setVisible]);
+
   return (
     <>
       <motion.div

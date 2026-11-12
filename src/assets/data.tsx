@@ -1,11 +1,19 @@
 import { BarChart3, Gamepad2, Plane, Trophy } from "lucide-react";
-import { SiFigma, SiJira, SiN8N, SiPostgresql, SiPython } from "react-icons/si";
-import type { Experience } from "../lib/types";
+import { IoLogoTableau } from "react-icons/io5";
+import { PiMicrosoftExcelLogoFill } from "react-icons/pi";
+import { SiN8N, SiPostgresql, SiPython } from "react-icons/si";
+import type {
+  Certification,
+  Education,
+  Experience,
+  FreelanceJob,
+  Project,
+} from "../lib/types";
 
 export const myInfo = {
   name: "Namit Nitin Chuke",
   alias: "Namit",
-  title: "Product | Data Analytics",
+  title: "Growth Analytics",
   image: "/personal.jpg",
   skills: [
     {
@@ -24,39 +32,39 @@ export const myInfo = {
       className: "bg-slate-800",
     },
     {
+      name: "Tableau",
+      children: <IoLogoTableau className="size-10" />,
+      className: "bg-[#E97627]",
+    },
+    {
       name: "n8n",
       children: <SiN8N className="size-10" />,
       className: "bg-[#FF6D5B]",
     },
     {
-      name: "Figma",
-      children: <SiFigma className="size-10" />,
-      className: "bg-[#F24E1E]",
-    },
-    {
-      name: "Jira",
-      children: <SiJira className="size-10" />,
-      className: "bg-[#0052CC]",
+      name: "Excel",
+      children: <PiMicrosoftExcelLogoFill className="size-10" />,
+      className: "bg-[#217346]",
     },
   ],
   about_me: {
-    head: "Product Builder & Data Analyst. I obsess over growth funnels, KPIs, and the decisions that move them. I turn ambiguity into actionable strategy.",
+    head: "Growth analyst at Leap Finance. I launch acquisition channels, fix lead quality, and turn funnel data into decisions that move revenue.",
     snapshot: [
       {
-        label: "28% → 46%",
-        value: "EU Funnel Attach Rate",
+        label: "₹47L",
+        value: "Masterclass Revenue (2 cohorts)",
       },
       {
-        label: "₹6 Lakh",
-        value: "EU LangSchool Revenue (in 1st month )",
+        label: "₹36L",
+        value: "Marketplace Enrollments (Month 1)",
       },
       {
-        label: "24h → 5m",
-        value: "Decision Time Reduction",
+        label: "−58%",
+        value: "CAC (₹75K → ₹31K)",
       },
       {
-        label: "130+",
-        value: "Placements Coordinated",
+        label: "12% → 37%",
+        value: "Lead-to-Relevant Rate",
       },
     ],
     hobbies: [
@@ -73,74 +81,77 @@ export const myInfo = {
         icon: <Plane className="size-6 text-zinc-400" />,
       },
     ],
-    other:
-      "A 0→1 mindset coupled with deep analytical curiosity. Currently leading growth initiatives at Leap Finance and spearheading student leadership milestones at NIT Bhopal. Focused on engineering workflows that eliminate process friction and drive scale.",
   },
   contact: {
     email: "namitchuke19@gmail.com",
     phone: "+91 9111009222",
     whatsapp: "https://wa.me/919111009222",
     linkedin: "https://www.linkedin.com/in/namit-nitin-chuke/",
-    github: "https://www.github.com/Namitchuke",
+    github: "https://github.com/Namitchuke",
     location: "Bengaluru, India",
   },
   experience: {
+    intro:
+      "I work where data meets execution: diagnosing funnels, launching programs and building the systems that let teams scale.",
     work: [
+      {
+        title: "Program Associate",
+        company: "Leap Finance",
+        location: "Bengaluru, India",
+        dateRange: "Jul 2026 - Present",
+        description:
+          "Built a counsellor marketplace that hit 20% lead-to-attendance vs 11% BAU and ₹36L in month-one enrollments. Launched masterclasses as an acquisition channel, cutting CAC 58% and CPL 63% for ₹47L revenue. Fixed Meta lead quality, lifting lead-to-relevant from 12% to 37%.",
+        skills: ["Growth Strategy", "Performance Marketing", "0→1 Launch"],
+        current: true,
+      },
       {
         title: "Program Intern",
         company: "Leap Finance",
         location: "Bengaluru, India",
-        dateRange: "2026 - Present",
+        dateRange: "Jan 2026 - Jun 2026",
         description:
-          "Spearheaded EU funnel optimization. Engineered LeapPlan AI to solve trust bottlenecks, establishing the EU LangSchool which generated 6L revenue within its first month.",
-        skills: ["Product Strategy", "Growth Ops", "Automation"],
-        current: true,
-      },
-      {
-        title: "Placement Coordinator",
-        company: "NIT Bhopal",
-        location: "Bhopal, India",
-        dateRange: "2024 - 2025",
-        description:
-          "Managed professional outreach for 130+ students and streamlined placement workflows.",
-        skills: ["Stakeholder", "Leadership"],
+          "Owned the EU bottom-of-funnel: a pan-India branch tracker took branch performance from 32% to 80%+ and NPS from 7.2 to 8.4. Launched EU LangSchool, growing attach rate from 10% to 26% with ₹12L in month one.",
+        skills: ["BranchOps", "0→1 Launch"],
       },
     ] satisfies Experience[],
     freelance: [
       {
-        project: "LeapPlan AI",
+        project: "Sales Analytics System",
         description:
-          "Built a full-stack AI decision engine, reducing evaluation time from 24h into 5 minutes.",
-        duration: "Jan 2026 - Present",
-        skills: ["Python", "FastAPI", "Claude Code"],
+          "Automated funnel reporting in Sheets and Apps Script (ad-level KPIs, stage-gated funnel, deduplicated lead sync), cutting reporting time 70%.",
+        skills: ["Apps Script", "Google Sheets", "Python"],
       },
       {
-        project: "Articulate AI",
+        project: "LeapPlan AI",
         description:
-          "Built an n8n pipeline to eliminate manual documentation overhead.",
-        duration: "Feb 2026 - Present",
-        skills: ["n8n", "LLM Prompting", "Gemini"],
+          "LLM planner turning counselling inputs into personalized study-abroad plans in 3–5 minutes, down from 24 hours.",
+        skills: ["FastAPI", "React", "Gemini"],
       },
-    ],
+    ] satisfies FreelanceJob[],
+  },
+  education: {
+    intro:
+      "My education shaped how I approach growth problems: with data, systems thinking, and a focus on measurable impact.",
   },
   studies: [
     {
       degreeTitle: "B.Tech",
-      institution: "NIT Bhopal",
+      institution: "NIT Bhopal (MANIT)",
       location: "Bhopal, India",
       dateRange: "2022 - 2026",
-      topics: ["Product thinking", "Data analysis"],
-      current: true,
+      topics: [],
     },
     {
-      degreeTitle: "Summer Program Management (SPM)",
+      degreeTitle: "Summer Program in Management",
       institution: "IIM Udaipur",
       location: "Udaipur, India",
-      dateRange: "2025",
-      topics: ["Business case analysis", "Strategic frameworks"],
-      current: false,
+      dateRange: "Summer 2025",
+      topics: [
+        "Data analytics & financial decision-making",
+        "Entrepreneurship & strategic management",
+      ],
     },
-  ],
+  ] satisfies Education[],
   projects: [
     {
       title: "AI PM Planner",
@@ -151,17 +162,11 @@ export const myInfo = {
       image: "/projects/ai_pm_planner.jpg",
     },
     {
-      title: "Costo Coffee Sales Dashboard",
-      description:
-        "Interactive dashboard visualizing coffee sales metrics, regional trends, and business KPIs.",
-      technologies: ["MySQL", "Power BI"],
-      githubLink: "https://github.com/Namitchuke/Costo-Coffee-Sales-Performance-Dashboard",
-      image: "/projects/Costo_Coffee.jpg",
-    },
-    {
       title: "Zomato Spatial EDA",
-      description: "Zomato data deep-dive: restaurant performance, customer preferences, and growth opportunities.",
+      description:
+        "Zomato data deep-dive: restaurant performance, customer preferences, and growth opportunities.",
       technologies: ["Python", "Pandas", "Matplotlib", "Seaborn"],
+      liveLink: "https://zomato-eda-19.streamlit.app/",
       githubLink: "https://github.com/Namitchuke/Zomato-EDA",
       image: "/projects/zomato.jpg",
     },
@@ -170,24 +175,39 @@ export const myInfo = {
       description:
         "Solving the 'Trust Deficit' in retail investing through strategic feature roadmapping.",
       technologies: ["Figma", "User Research", "GTM Strategy"],
-      liveLink: "https://docs.google.com/presentation/d/1TFpuWMgQIKBA2Z6S1GuCaNl-tsVhS_3WX4C9wnQHEYU/edit?slide=id.p1#slide=id.p1",
+      liveLink:
+        "https://docs.google.com/presentation/d/1TFpuWMgQIKBA2Z6S1GuCaNl-tsVhS_3WX4C9wnQHEYU/edit?usp=sharing",
+      liveLabel: "View Deck",
       image: "/projects/Dhan.jpg",
     },
-  ],
+    {
+      title: "Costo Coffee Sales Dashboard",
+      description:
+        "Interactive dashboard visualizing coffee sales metrics, regional trends, and business KPIs.",
+      technologies: ["MySQL", "Power BI"],
+      githubLink:
+        "https://github.com/Namitchuke/Costo-Coffee-Sales-Performance-Dashboard",
+      image: "/projects/Costo_Coffee.jpg",
+    },
+  ] satisfies Project[],
   certifications: [
     {
       title: "Google Data Analytics",
-      date: "2025",
-      description:
-        "Demonstrates foundational level knowledge of cloud services and how those services are provided with Microsoft Azure.",
-      credentialId: "HZDTAVOW93DS",
-      url: "https://www.coursera.org/account/accomplishments/professional-cert/HZDTAVOW93DS",
+      issuer: "Google",
+      date: "2024",
+      url: "https://drive.google.com/file/d/17tc4aGES_Pv0TfOnEb8-GPDbkS3Xq4Cn/view",
     },
     {
-      title: "IBM AI Product Manager Professional Certificate",
-      date: "2026",
-      description:
-        "Buildproduct management and generative AI skills",
+      title: "Power BI Job Simulation",
+      issuer: "PwC (Forage)",
+      date: "2025",
+      url: "https://drive.google.com/file/d/1kXfTdBXSL5az8I5bdOZlq_WC87qtXwdB/view",
     },
-  ],
+    {
+      title: "AI Product Manager",
+      issuer: "IBM",
+      date: "2026",
+      url: "https://drive.google.com/file/d/1kaw_r5xvf7lSPhpOiKg8ANrVqOcpWxib/view",
+    },
+  ] satisfies Certification[],
 };

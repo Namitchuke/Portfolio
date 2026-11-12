@@ -1,13 +1,6 @@
+import type { FreelanceJob } from "../../lib/types";
 import { SkillTag } from "../ui/SkillTag";
 import { AnimatedBox } from "./AnimatedBox";
-
-export type FreelanceJob = {
-  project: string;
-  client?: string;
-  description: string;
-  duration?: string;
-  skills: string[];
-};
 
 export type AnimatedFreelanceBoxProps = {
   freelanceJobs: FreelanceJob[];
@@ -24,8 +17,12 @@ export const AnimatedFreelanceBox = ({
           <div key={index} className="rounded-lg">
             <div className="flex gap-2">
               <h4 className="text-zinc-100">{job.project}</h4>
-              <p className="text-zinc-500">-</p>
-              <p className="text-zinc-300">{job.client}</p>
+              {job.client ? (
+                <>
+                  <p className="text-zinc-500">-</p>
+                  <p className="text-zinc-300">{job.client}</p>
+                </>
+              ) : null}
             </div>
             <p className="text-zinc-400 text-sm">{job.description}</p>
             <div className="mt-1 flex flex-wrap gap-1">

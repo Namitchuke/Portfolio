@@ -19,6 +19,7 @@ const GithubBox = () => {
       <motion.a
         whileHover={{ y: -15, scale: 1.2 }}
         href={myInfo.contact.github}
+        aria-label="GitHub profile"
         target="_blank"
         rel="noopener noreferrer"
         className="size-full flex items-center justify-center p-4"
@@ -35,6 +36,7 @@ const LinkedInBox = () => {
       <motion.a
         whileHover={{ y: -15, scale: 1.2 }}
         href={myInfo.contact.linkedin}
+        aria-label="LinkedIn profile"
         target="_blank"
         rel="noopener noreferrer"
         className="size-full flex items-center justify-center p-4"

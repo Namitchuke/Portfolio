@@ -6,7 +6,7 @@ export const AnimatedImageBox = () => {
     <AnimatedBox className="col-span-4 row-span-4 p-0 overflow-hidden">
       <img
         src={myInfo.image}
-        alt="A photo of me"
+        alt={`Photo of ${myInfo.name}`}
         className="w-full h-full object-cover"
       />
     </AnimatedBox>

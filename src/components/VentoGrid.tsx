@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { AnimatedBox } from "./animated-ui/AnimatedBox";
 import { myInfo } from "../assets/data";
 import { AnimatedMenuBox } from "./animated-ui/AnimatedMenuBox";
 import { AnimatedHeaderBox } from "./animated-ui/AnimatedHeaderBox";
@@ -10,6 +9,7 @@ import { AnimatedSnapshotBox } from "./animated-ui/AnimatedSnapshotBox";
 import { AnimatedImageBox } from "./animated-ui/AnimatedImageBox";
 import { AnimatedHobbiesBox } from "./animated-ui/AnimatedHobbiesBox";
 import { AnimatedEducationBox } from "./animated-ui/AnimatedEducationBox";
+import { AnimatedCertificationsBox } from "./animated-ui/AnimatedCertificationsBox";
 import { useSectionContext } from "../hooks/useSectionContext";
 import { AnimatedRightLeftBox } from "./animated-ui/AnimatedRightLeftBox";
 import { AnimatedProjectsBox } from "./animated-ui/AnimatedProjectsBox";
@@ -46,7 +46,6 @@ const NormalOrProjectsBox = () => {
       {activeSection === "projects" ? (
         <AnimatedProjectsBox currentProjectId={value} />
       ) : null}
-      {activeSection !== "projects" ? <EmptyBox /> : null}
       {activeSection !== "projects" ? <AnimatedHeaderBox /> : null}
       {activeSection !== "projects" ? <ExperienceOrAboutOrImageBox /> : null}
       <AnimatedMenuBox />
@@ -55,19 +54,12 @@ const NormalOrProjectsBox = () => {
       {activeSection !== "projects" ? <FreelanceOrSocialsBox /> : null}
       {activeSection !== "projects" ? <AnimatedEmailBox /> : null}
       {activeSection !== "projects" ? <AnimatedLocationBox /> : null}
-      {activeSection !== "projects" ? <EmptyBox /> : null}
       {activeSection === "projects" ? (
-        <AnimatedRightLeftBox onLeftClick={next} onRightClick={previous} />
+        <AnimatedRightLeftBox onLeftClick={previous} onRightClick={next} />
       ) : null}
     </>
   );
 };
-
-function EmptyBox() {
-  return (
-    <AnimatedBox className="col-span-4 sm:col-span-5 row-span-1 bg-transparent border-none md:hidden" />
-  );
-}
 
 const SecondaryInformationBox = () => {
   const { activeSection } = useSectionContext();
@@ -102,6 +94,10 @@ const ExperienceOrAboutOrImageBox = () => {
 
   if (activeSection === "about") {
     return <AnimatedSnapshotBox />;
+  }
+
+  if (activeSection === "education") {
+    return <AnimatedCertificationsBox />;
   }
 
   return <AnimatedImageBox />;

@@ -13,8 +13,15 @@ export const AnimatedProjectsBox = ({
   const currentProject = myInfo.projects[currentProjectId];
   const maxProjects = myInfo.projects.length;
 
-  const { title, description, image, technologies, liveLink, githubLink } =
-    currentProject;
+  const {
+    title,
+    description,
+    image,
+    technologies,
+    liveLink,
+    liveLabel,
+    githubLink,
+  } = currentProject;
 
   return (
     <AnimatedBox
@@ -56,7 +63,7 @@ export const AnimatedProjectsBox = ({
                 className="flex items-center text-zinc-300 hover:text-zinc-100 bg-zinc-700 px-4 py-1 rounded-full"
               >
                 <ExternalLink className="w-4 h-4 mr-1" />
-                Live Demo
+                {liveLabel ?? "Live Demo"}
               </a>
             )}
             {githubLink && (

@@ -14,7 +14,12 @@ export const AnimatedEmailBox = () => {
   return (
     <AnimatedBox className="col-span-5 row-span-1 flex items-center justify-between p-2 px-6">
       <MdAlternateEmail className="size-6 text-teal-300" />
-      <p className="select-all">{myInfo.contact.email}</p>
+      <a
+        href={`mailto:${myInfo.contact.email}`}
+        className="hover:text-teal-300 transition-colors"
+      >
+        {myInfo.contact.email}
+      </a>
     </AnimatedBox>
   );
 };

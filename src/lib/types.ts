@@ -17,4 +17,27 @@ export type Education = {
   current?: boolean;
 };
 
-export type Certification = "string";
+export type FreelanceJob = {
+  project: string;
+  client?: string;
+  description: string;
+  duration?: string;
+  skills: string[];
+};
+
+export type Project = {
+  title: string;
+  description: string;
+  technologies: string[];
+  image: string;
+  liveLink?: string;
+  liveLabel?: string;
+  githubLink?: string;
+};
+
+export type Certification = {
+  title: string;
+  issuer: string;
+  date: string;
+  url?: string;
+};

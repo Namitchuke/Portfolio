@@ -13,6 +13,7 @@ export function AnimatedHamburgerButton({
     <AnimatedBox className="p-0">
       <motion.button
         onClick={() => setIsOpen((pv) => !pv)}
+        aria-label="Open menu"
         className="p-2 m-auto flex items-center justify-center"
       >
         <Menu className="size-10" />
