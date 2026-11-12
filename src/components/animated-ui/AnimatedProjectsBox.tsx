@@ -32,14 +32,14 @@ export const AnimatedProjectsBox = ({
         <div className="absolute bottom-0 right-0 text-sm text-zinc-500">
           {currentProjectId + 1} / {maxProjects}
         </div>
-        <h2 className="text-4xl font-medium leading-tight flex items-center gap-3">
+        <h2 className="text-3xl md:text-4xl font-medium leading-tight flex items-center gap-3">
           <Code className="size-8 text-zinc-400" />
           My Personal Projects
         </h2>
         <img
           src={image}
           alt={title}
-          className="w-full h-80 object-cover mt-4 rounded border border-zinc-700 shadow-lg"
+          className="w-full aspect-[1600/830] md:aspect-auto md:h-96 object-cover mt-4 rounded border border-zinc-700 shadow-lg"
         />
         <div className="mt-4">
           <h3 className="text-2xl font-semibold text-zinc-100 mb-2">{title}</h3>

@@ -1,9 +1,7 @@
 import { motion } from "framer-motion";
 import { AnimatedHeaderBox } from "./animated-ui/AnimatedHeaderBox";
-import { AnimatedHamburgerButton } from "./animated-ui/AnimatedHamburgerButton";
-import { useState } from "react";
-import { AnimatedModal } from "./animated-ui/AnimatedModal";
-import { AnimatedMenuBox } from "./animated-ui/AnimatedMenuBox";
+import { BiDownload } from "react-icons/bi";
+import { MobileNav } from "./MobileNav";
 import { AnimatedImageBox } from "./animated-ui/AnimatedImageBox";
 import { AnimatedSocialsBox } from "./animated-ui/AnimatedSocialsBox";
 import { AnimatedEmailBox } from "./animated-ui/AnimatedEmailBox";
@@ -22,21 +20,20 @@ import { AnimatedRightLeftBox } from "./animated-ui/AnimatedRightLeftBox";
 import { useBoundedCounter } from "../hooks/useBoundedCounter";
 
 export const MobileColumn = () => {
-  const [isMenuVisible, setIsMenuVisible] = useState(false);
-
-  const sectionChanged = () => {
-    setIsMenuVisible(false);
-  };
-
   return (
-    <motion.div className="z-10 max-w-md md:hidden flex flex-col gap-4 p-4">
-      <div className="flex justify-end-safe">
-        <AnimatedHamburgerButton setIsOpen={setIsMenuVisible} />
-      </div>
+    <motion.div className="z-10 w-full max-w-md md:hidden flex flex-col gap-5 px-6 pt-5 pb-28">
+      <header className="flex items-center justify-between">
+        <span className="font-semibold tracking-wide">{myInfo.name}</span>
+        <a
+          href="/projects/Namit_Nitin_Chuke_Resume.pdf"
+          download
+          className="flex items-center gap-1.5 rounded-md border border-teal-400 px-3 py-1.5 text-sm font-semibold"
+        >
+          <BiDownload className="size-4" /> CV
+        </a>
+      </header>
       <ContentBox />
-      <AnimatedModal setVisible={setIsMenuVisible} visible={isMenuVisible}>
-        <AnimatedMenuBox sectionChanged={sectionChanged} />
-      </AnimatedModal>
+      <MobileNav />
     </motion.div>
   );
 };
@@ -55,7 +52,7 @@ const ContentBox = () => {
       <>
         <AnimatedHeaderBox />
 
-        <AnimatedImageBox />
+        <AnimatedImageBox className="h-80" />
         <div className="flex w-full gap-4">
           <AnimatedSocialsBox />
         </div>
@@ -70,7 +67,7 @@ const ContentBox = () => {
   if (activeSection === "about") {
     return (
       <>
-        <AnimatedImageBox />
+        <AnimatedImageBox className="h-80" />
         <AnimatedHeaderBox />
         <AnimatedSnapshotBox />
         <AnimatedHobbiesBox />
