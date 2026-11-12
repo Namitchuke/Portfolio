@@ -34,7 +34,9 @@ export const ExperienceItem = ({ experience, sm }: ExperienceItemProps) => (
       <MapPin className="w-4 h-4 mr-1" />
       {experience.location}
     </div>
-    <p className="text-zinc-300 mb-4">{experience.description}</p>
+    <p className="text-zinc-300 mb-4 text-sm lg:text-base">
+      {experience.description}
+    </p>
     <div className="flex flex-wrap gap-1">
       {experience.skills.map((skill, index) => (
         <SkillTag skill={skill} size="md" key={index} />

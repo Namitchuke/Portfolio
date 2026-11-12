@@ -9,7 +9,9 @@ export const AnimatedAboutMeHeaderBox = () => {
         <h2 className="text-4xl font-medium leading-tight flex items-center gap-3">
           <PersonStandingIcon className="size-8 text-zinc-400" /> About Me
         </h2>
-        <p className="text-zinc-300">{myInfo.about_me.head}</p>
+        <p className="text-zinc-300 lg:text-lg leading-relaxed">
+          {myInfo.about_me.head}
+        </p>
       </div>
     </AnimatedBox>
   );

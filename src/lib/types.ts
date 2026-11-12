@@ -15,6 +15,7 @@ export type Education = {
   dateRange: string;
   topics: string[];
   current?: boolean;
+  url?: string;
 };
 
 export type FreelanceJob = {

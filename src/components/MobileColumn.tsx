@@ -17,7 +17,6 @@ import { AnimatedExperienceBox } from "./animated-ui/AnimatedExperienceBox";
 import { myInfo } from "../assets/data";
 import { AnimatedFreelanceBox } from "./animated-ui/AnimatedFreelanceBox";
 import { AnimatedEducationBox } from "./animated-ui/AnimatedEducationBox";
-import { AnimatedCertificationsBox } from "./animated-ui/AnimatedCertificationsBox";
 import { AnimatedProjectsBox } from "./animated-ui/AnimatedProjectsBox";
 import { AnimatedRightLeftBox } from "./animated-ui/AnimatedRightLeftBox";
 import { useBoundedCounter } from "../hooks/useBoundedCounter";
@@ -102,7 +101,6 @@ const ContentBox = () => {
       <>
         <AnimatedHeaderBox />
         <AnimatedEducationBox />
-        <AnimatedCertificationsBox />
         <div className="flex w-full gap-4">
           <AnimatedSocialsBox />
         </div>

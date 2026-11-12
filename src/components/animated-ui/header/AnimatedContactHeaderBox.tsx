@@ -20,7 +20,8 @@ export const AnimatedContactHeaderBox = () => {
           <MailIcon className="size-8 text-zinc-400" /> Contact Me
         </h2>
         <p className="text-zinc-300">
-          Open to growth, product and analytics roles. Let's talk.
+          Open to growth, product and analytics roles where I can own a funnel
+          end to end. Message me on WhatsApp or drop an email, and let's talk.
         </p>
         <div className="grid grid-cols-1 gap-2">
           {contactOptions.map((option, idx) => (

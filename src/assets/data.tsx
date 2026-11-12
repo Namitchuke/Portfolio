@@ -17,6 +17,16 @@ export const myInfo = {
   image: "/personal.jpg",
   skills: [
     {
+      name: "Excel",
+      children: <PiMicrosoftExcelLogoFill className="size-10" />,
+      className: "bg-[#217346]",
+    },
+    {
+      name: "Power BI",
+      children: <BarChart3 className="size-10 text-yellow-400" />,
+      className: "bg-slate-800",
+    },
+    {
       name: "Python",
       children: <SiPython className="size-10" />,
       className: "bg-[#3776AB]",
@@ -25,11 +35,6 @@ export const myInfo = {
       name: "SQL",
       children: <SiPostgresql className="size-10" />,
       className: "bg-[#4169E1]",
-    },
-    {
-      name: "Power BI",
-      children: <BarChart3 className="size-10 text-yellow-400" />,
-      className: "bg-slate-800",
     },
     {
       name: "Tableau",
@@ -41,30 +46,25 @@ export const myInfo = {
       children: <SiN8N className="size-10" />,
       className: "bg-[#FF6D5B]",
     },
-    {
-      name: "Excel",
-      children: <PiMicrosoftExcelLogoFill className="size-10" />,
-      className: "bg-[#217346]",
-    },
   ],
   about_me: {
-    head: "Growth analyst at Leap Finance. I find funnel leaks, launch acquisition channels and turn data into revenue.",
+    head: "Growth analyst at Leap Finance who leads 0→1 initiatives end to end: launching acquisition channels, building funnels from scratch and fixing lead quality. I turn funnel data into decisions that move revenue.",
     snapshot: [
       {
         label: "₹47L",
-        value: "Masterclass Revenue (2 cohorts)",
+        value: "Revenue from 0→1 Yocket Elite masterclasses",
       },
       {
         label: "₹36L",
-        value: "Marketplace Enrollments (Month 1)",
+        value: "Month-1 enrollments, 0→1 counsellor marketplace",
       },
       {
-        label: "−58%",
-        value: "CAC (₹75K → ₹31K)",
+        label: "58%",
+        value: "Lower customer acquisition cost",
       },
       {
         label: "12% → 37%",
-        value: "Lead-to-Relevant Rate",
+        value: "Lead Quality",
       },
     ],
     hobbies: [
@@ -100,8 +100,14 @@ export const myInfo = {
         location: "Bengaluru, India",
         dateRange: "Jul 2026 - Present",
         description:
-          "₹36L month-one enrollments from a 0→1 counsellor marketplace (20% L2A vs 11% BAU). ₹47L from masterclasses at 58% lower CAC. Lead-to-relevant 12% → 37%.",
-        skills: ["Growth Strategy", "Performance Marketing", "0→1 Launch"],
+          "Led 0→1 Yocket Elite masterclasses: ₹47L revenue at 58% lower CAC. Built a 0→1 counsellor marketplace: ₹36L in month one (20% L2A vs 11% BAU). Lead quality 12% → 37%.",
+        skills: [
+          "Growth Strategy",
+          "Performance Marketing",
+          "0→1 Launch",
+          "Funnel Analytics",
+          "Marketplace",
+        ],
         current: true,
       },
       {
@@ -111,24 +117,30 @@ export const myInfo = {
         dateRange: "Jan 2026 - Jun 2026",
         description:
           "Branch performance 32% → 80%+ and NPS 7.2 → 8.4. EU LangSchool attach rate 10% → 26%, ₹12L in month one.",
-        skills: ["BranchOps", "0→1 Launch"],
+        skills: ["Growth Strategy", "BranchOps", "0→1 Launch"],
       },
     ] satisfies Experience[],
     freelance: [
       {
         project: "Sales Analytics System",
         description: "−70% reporting time with automated funnel dashboards.",
-        skills: ["Apps Script", "Google Sheets", "Python"],
+        skills: ["Apps Script", "Python"],
       },
       {
-        project: "LeapPlan AI",
-        description: "Study-abroad plans in 3–5 min, down from 24 hrs.",
-        skills: ["FastAPI", "React", "Gemini"],
+        project: "Counsellor Index",
+        description: "L2A 20% → 27% by routing leads to best-fit counsellors.",
+        skills: ["Lead Routing", "Google Sheets"],
+      },
+      {
+        project: "Comms Automation",
+        description: "~500 leads a month get event emails automatically.",
+        skills: ["Apps Script"],
       },
     ] satisfies FreelanceJob[],
   },
   education: {
-    intro: "An engineering foundation with a business lens.",
+    intro:
+      "An engineering degree from NIT Bhopal, management training at IIM Udaipur and IBM AI product certification: an engineering foundation with a business lens.",
   },
   studies: [
     {
@@ -139,10 +151,18 @@ export const myInfo = {
       topics: [],
     },
     {
-      degreeTitle: "Summer Program in Management",
+      degreeTitle: "AI Product Manager",
+      institution: "IBM · Professional Certificate",
+      location: "Online",
+      dateRange: "2026",
+      topics: [],
+      url: "https://drive.google.com/file/d/1kaw_r5xvf7lSPhpOiKg8ANrVqOcpWxib/view",
+    },
+    {
+      degreeTitle: "Program in Management",
       institution: "IIM Udaipur",
       location: "Udaipur, India",
-      dateRange: "Summer 2025",
+      dateRange: "2025",
       topics: [
         "Data analytics & financial decision-making",
         "Entrepreneurship & strategic management",
@@ -156,7 +176,7 @@ export const myInfo = {
       technologies: ["Python", "FastAPI", "Gemini API"],
       liveLink: "https://ai-pm-learning-system-1.onrender.com/",
       githubLink: "https://github.com/Namitchuke/ai-pm-learning-system",
-      image: "/projects/ai_pm_planner.jpg",
+      image: "/projects/ai_pm_cover.jpg",
     },
     {
       title: "Zomato Spatial EDA",
@@ -165,7 +185,7 @@ export const myInfo = {
       technologies: ["Python", "Pandas", "Matplotlib", "Seaborn"],
       liveLink: "https://zomato-eda-19.streamlit.app/",
       githubLink: "https://github.com/Namitchuke/Zomato-EDA",
-      image: "/projects/zomato.jpg",
+      image: "/projects/zomato_cover.jpg",
     },
     {
       title: "Dhan Pro Expansion",
@@ -175,7 +195,7 @@ export const myInfo = {
       liveLink:
         "https://docs.google.com/presentation/d/1TFpuWMgQIKBA2Z6S1GuCaNl-tsVhS_3WX4C9wnQHEYU/edit?usp=sharing",
       liveLabel: "View Deck",
-      image: "/projects/Dhan.jpg",
+      image: "/projects/dhan_cover.jpg",
     },
     {
       title: "Costo Coffee Sales Dashboard",
@@ -184,7 +204,7 @@ export const myInfo = {
       technologies: ["MySQL", "Power BI"],
       githubLink:
         "https://github.com/Namitchuke/Costo-Coffee-Sales-Performance-Dashboard",
-      image: "/projects/Costo_Coffee.jpg",
+      image: "/projects/costo_cover.jpg",
     },
   ] satisfies Project[],
   certifications: [
@@ -195,16 +215,10 @@ export const myInfo = {
       url: "https://drive.google.com/file/d/17tc4aGES_Pv0TfOnEb8-GPDbkS3Xq4Cn/view",
     },
     {
-      title: "Power BI Job Simulation",
+      title: "Power BI",
       issuer: "PwC (Forage)",
       date: "2025",
       url: "https://drive.google.com/file/d/1kXfTdBXSL5az8I5bdOZlq_WC87qtXwdB/view",
-    },
-    {
-      title: "AI Product Manager",
-      issuer: "IBM",
-      date: "2026",
-      url: "https://drive.google.com/file/d/1kaw_r5xvf7lSPhpOiKg8ANrVqOcpWxib/view",
     },
   ] satisfies Certification[],
 };

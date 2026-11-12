@@ -3,7 +3,6 @@ import { AnimatedGridMainBackground } from "./components/animated-ui/AnimatedGri
 import { MobileColumn } from "./components/MobileColumn";
 import { VentoGrid } from "./components/VentoGrid";
 import { SectionContextProvider } from "./context/SectionContextProvider";
-import { myInfo } from "./assets/data";
 
 function App() {
   return (
@@ -11,11 +10,6 @@ function App() {
       <AnimatedGridMainBackground>
         <VentoGrid />
         <MobileColumn />
-        <div className="text-xs pb-4">
-          <p>
-            Made by <span className="italic text-teal-200">{myInfo.alias}</span>
-          </p>
-        </div>
       </AnimatedGridMainBackground>
     </SectionContextProvider>
   );

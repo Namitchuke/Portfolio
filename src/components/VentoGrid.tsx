@@ -9,7 +9,6 @@ import { AnimatedSnapshotBox } from "./animated-ui/AnimatedSnapshotBox";
 import { AnimatedImageBox } from "./animated-ui/AnimatedImageBox";
 import { AnimatedHobbiesBox } from "./animated-ui/AnimatedHobbiesBox";
 import { AnimatedEducationBox } from "./animated-ui/AnimatedEducationBox";
-import { AnimatedCertificationsBox } from "./animated-ui/AnimatedCertificationsBox";
 import { useSectionContext } from "../hooks/useSectionContext";
 import { AnimatedRightLeftBox } from "./animated-ui/AnimatedRightLeftBox";
 import { AnimatedProjectsBox } from "./animated-ui/AnimatedProjectsBox";
@@ -25,7 +24,7 @@ export const VentoGrid = () => {
       transition={{
         staggerChildren: 0.15,
       }}
-      className="hidden md:grid gap-4 grid-flow-dense grid-cols-12 max-w-4xl z-10"
+      className="hidden md:grid gap-4 grid-flow-dense grid-cols-12 grid-rows-[160px_160px_112px_112px_56px_56px] max-w-4xl z-10"
     >
       <NormalOrProjectsBox />
     </motion.section>
@@ -85,7 +84,7 @@ const ExperienceOrAboutOrImageBox = () => {
   if (activeSection === "experience") {
     return (
       <AnimatedExperienceBox
-        className="col-span-4 row-span-3"
+        className="col-span-4 row-span-2"
         experience={myInfo.experience.work[1]}
         sm
       />
@@ -94,10 +93,6 @@ const ExperienceOrAboutOrImageBox = () => {
 
   if (activeSection === "about") {
     return <AnimatedSnapshotBox />;
-  }
-
-  if (activeSection === "education") {
-    return <AnimatedCertificationsBox />;
   }
 
   return <AnimatedImageBox />;
