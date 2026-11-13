@@ -4,7 +4,7 @@ My personal portfolio, live at **[namitchuke-portfolio.vercel.app](https://namit
 
 Built with **React**, **TypeScript**, **Tailwind CSS** and **Framer Motion**. Fully responsive.
 
-Sections: Home · About · Experience · Education (with certifications) · Projects · Contact
+Sections: Home · About · Experience · Education (with certifications) · Projects · Contact. On phones, a bottom bar switches between them.
 
 All text lives in [`src/assets/data.tsx`](src/assets/data.tsx), so content updates don't need component changes.
 
@@ -13,8 +13,8 @@ All text lives in [`src/assets/data.tsx`](src/assets/data.tsx), so content updat
 ```bash
 git clone https://github.com/Namitchuke/Portfolio
 cd Portfolio
-npm install --legacy-peer-deps
+npm install
 npm run dev
 ```
 
-`--legacy-peer-deps` is needed until `eslint-plugin-react-hooks` supports ESLint 10.
+Then open http://localhost:5173.
