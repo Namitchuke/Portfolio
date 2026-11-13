@@ -14,6 +14,8 @@ export const myInfo = {
   name: "Namit Nitin Chuke",
   alias: "Namit",
   title: "Growth Analytics",
+  tagline:
+    "I lead 0→1 growth bets at Leap Finance: new acquisition channels, a counsellor marketplace and funnels built from scratch, all measured in revenue.",
   image: "/personal.jpg",
   skills: [
     {
@@ -140,23 +142,15 @@ export const myInfo = {
   },
   education: {
     intro:
-      "An engineering degree from NIT Bhopal, management training at IIM Udaipur and IBM AI product certification: an engineering foundation with a business lens.",
+      "Engineering at NIT Bhopal taught me to break problems into systems. IIM Udaipur added business judgment, and IBM's AI Product Manager program taught me to scope AI products. Together they shape how I build 0→1 businesses like the counsellor marketplace.",
   },
   studies: [
     {
       degreeTitle: "B.Tech",
-      institution: "NIT Bhopal (MANIT)",
+      institution: "NIT Bhopal",
       location: "Bhopal, India",
       dateRange: "2022 - 2026",
       topics: [],
-    },
-    {
-      degreeTitle: "AI Product Manager",
-      institution: "IBM · Professional Certificate",
-      location: "Online",
-      dateRange: "2026",
-      topics: [],
-      url: "https://drive.google.com/file/d/1kaw_r5xvf7lSPhpOiKg8ANrVqOcpWxib/view",
     },
     {
       degreeTitle: "Program in Management",
@@ -215,10 +209,10 @@ export const myInfo = {
       url: "https://drive.google.com/file/d/17tc4aGES_Pv0TfOnEb8-GPDbkS3Xq4Cn/view",
     },
     {
-      title: "Power BI",
-      issuer: "PwC (Forage)",
-      date: "2025",
-      url: "https://drive.google.com/file/d/1kXfTdBXSL5az8I5bdOZlq_WC87qtXwdB/view",
+      title: "AI Product Manager",
+      issuer: "IBM",
+      date: "2026",
+      url: "https://drive.google.com/file/d/1kaw_r5xvf7lSPhpOiKg8ANrVqOcpWxib/view",
     },
   ] satisfies Certification[],
 };
