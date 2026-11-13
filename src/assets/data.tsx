@@ -94,7 +94,7 @@ export const myInfo = {
   },
   experience: {
     intro:
-      "Where data meets execution: funnels, 0→1 launches and the systems behind them.",
+      "Where data meets execution. At Leap Finance I run 0→1 launches and funnel fixes end to end: ₹47L from a new masterclass channel, ₹36L from a counsellor marketplace in month one, and 70% less time spent on reporting.",
     work: [
       {
         title: "Program Associate",
@@ -129,14 +129,16 @@ export const myInfo = {
         skills: ["Apps Script", "Python"],
       },
       {
-        project: "Counsellor Index",
-        description: "L2A 20% → 27% by routing leads to best-fit counsellors.",
-        skills: ["Lead Routing", "Google Sheets"],
+        project: "Supply–Demand Mapping",
+        description:
+          "L2A 20% → 27% by matching lead archetypes to counsellor fit and capacity.",
+        skills: ["Lead Routing", "Capacity Planning"],
       },
       {
-        project: "Comms Automation",
-        description: "~500 leads a month get event emails automatically.",
-        skills: ["Apps Script"],
+        project: "Masterclass Attendance",
+        description:
+          "Lead-to-attendance 29% → 48% with an AI calling flow, automated reminders and better slots.",
+        skills: ["AI Calling", "Automation"],
       },
     ] satisfies FreelanceJob[],
   },
@@ -213,6 +215,12 @@ export const myInfo = {
       issuer: "IBM",
       date: "2026",
       url: "https://drive.google.com/file/d/1kaw_r5xvf7lSPhpOiKg8ANrVqOcpWxib/view",
+    },
+    {
+      title: "Power BI",
+      issuer: "PwC",
+      date: "2025",
+      url: "https://drive.google.com/file/d/1kXfTdBXSL5az8I5bdOZlq_WC87qtXwdB/view",
     },
   ] satisfies Certification[],
 };
