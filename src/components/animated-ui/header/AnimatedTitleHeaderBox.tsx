@@ -8,6 +8,11 @@ export const AnimatedTitleHeaderBox = () => {
   return (
     <AnimatedBox className="col-span-5 row-span-2 p-0">
       <div className="p-6">
+        <img
+          src={myInfo.image}
+          alt={`Photo of ${myInfo.name}`}
+          className="md:hidden size-20 rounded-full object-cover object-top border-2 border-teal-400 mb-4"
+        />
         <h1 className="text-3xl lg:text-4xl font-medium leading-tight">
           Hi, I'm {myInfo.alias}.
         </h1>

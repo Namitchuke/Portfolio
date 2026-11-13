@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { AnimatedHeaderBox } from "./animated-ui/AnimatedHeaderBox";
 import { BiDownload } from "react-icons/bi";
 import { MobileNav } from "./MobileNav";
-import { AnimatedImageBox } from "./animated-ui/AnimatedImageBox";
 import { AnimatedSocialsBox } from "./animated-ui/AnimatedSocialsBox";
 import { AnimatedEmailBox } from "./animated-ui/AnimatedEmailBox";
 import { AnimatedLocationBox } from "./animated-ui/AnimatedLocationBox";
@@ -52,7 +51,6 @@ const ContentBox = () => {
       <>
         <AnimatedHeaderBox />
 
-        <AnimatedImageBox className="h-80" />
         <div className="flex w-full gap-4">
           <AnimatedSocialsBox />
         </div>
@@ -67,7 +65,6 @@ const ContentBox = () => {
   if (activeSection === "about") {
     return (
       <>
-        <AnimatedImageBox className="h-80" />
         <AnimatedHeaderBox />
         <AnimatedSnapshotBox />
         <AnimatedHobbiesBox />
