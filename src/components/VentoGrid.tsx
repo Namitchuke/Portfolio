@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { myInfo } from "../assets/data";
 import { AnimatedMenuBox } from "./animated-ui/AnimatedMenuBox";
 import { AnimatedHeaderBox } from "./animated-ui/AnimatedHeaderBox";
@@ -15,47 +14,31 @@ import { AnimatedProjectsBox } from "./animated-ui/AnimatedProjectsBox";
 import { AnimatedSocialsBox } from "./animated-ui/AnimatedSocialsBox";
 import { AnimatedEmailBox } from "./animated-ui/AnimatedEmailBox";
 import { AnimatedLocationBox } from "./animated-ui/AnimatedLocationBox";
-import { AnimatedLanguagesBox } from "./animated-ui/AnimatedLanguagesBox";
-import { useBoundedCounter } from "../hooks/useBoundedCounter";
+import { AnimatedStatusBox } from "./animated-ui/AnimatedStatusBox";
 
 export const VentoGrid = () => {
   return (
-    <motion.section
-      transition={{
-        staggerChildren: 0.15,
-      }}
-      className="hidden md:grid gap-4 grid-flow-dense grid-cols-12 grid-rows-[160px_160px_112px_112px_56px_56px] max-w-4xl z-10"
-    >
+    <section className="hidden md:grid gap-4 grid-flow-dense grid-cols-12 grid-rows-[160px_160px_112px_112px_56px_56px] max-w-4xl z-10">
       <NormalOrProjectsBox />
-    </motion.section>
+    </section>
   );
 };
 
 const NormalOrProjectsBox = () => {
   const { activeSection } = useSectionContext();
 
-  const { value, next, previous } = useBoundedCounter(
-    0,
-    0,
-    myInfo.projects.length - 1
-  );
-
   return (
     <>
-      {activeSection === "projects" ? (
-        <AnimatedProjectsBox currentProjectId={value} />
-      ) : null}
+      {activeSection === "projects" ? <AnimatedProjectsBox /> : null}
       {activeSection !== "projects" ? <AnimatedHeaderBox /> : null}
       {activeSection !== "projects" ? <ExperienceOrAboutOrImageBox /> : null}
       <AnimatedMenuBox />
       {activeSection !== "projects" ? <SecondaryInformationBox /> : null}
-      {activeSection !== "projects" ? <AnimatedLanguagesBox /> : null}
+      {activeSection !== "projects" ? <AnimatedStatusBox /> : null}
       {activeSection !== "projects" ? <FreelanceOrSocialsBox /> : null}
       {activeSection !== "projects" ? <AnimatedEmailBox /> : null}
       {activeSection !== "projects" ? <AnimatedLocationBox /> : null}
-      {activeSection === "projects" ? (
-        <AnimatedRightLeftBox onLeftClick={previous} onRightClick={next} />
-      ) : null}
+      {activeSection === "projects" ? <AnimatedRightLeftBox /> : null}
     </>
   );
 };

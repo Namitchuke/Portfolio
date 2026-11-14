@@ -3,7 +3,7 @@ export type Experience = {
   company: string;
   location: string;
   dateRange: string;
-  description: string;
+  highlights: string[];
   skills: string[];
   current?: boolean;
 };

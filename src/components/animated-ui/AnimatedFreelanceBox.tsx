@@ -1,4 +1,5 @@
 import type { FreelanceJob } from "../../lib/types";
+import { Metrics } from "../ui/Metrics";
 import { SkillTag } from "../ui/SkillTag";
 import { AnimatedBox } from "./AnimatedBox";
 
@@ -11,23 +12,27 @@ export const AnimatedFreelanceBox = ({
 }: AnimatedFreelanceBoxProps) => {
   return (
     <AnimatedBox className="col-span-4 row-span-4 p-4">
-      <h3 className="text-lg font-semibold text-zinc-100">Projects</h3>
-      <div className="mt-1 space-y-1">
-        {freelanceJobs.map((job, index) => (
-          <div key={index} className="rounded-lg">
-            <div className="flex gap-2">
-              <h4 className="text-zinc-100">{job.project}</h4>
+      <h3 className="text-lg leading-6 font-semibold text-zinc-100">
+        Projects
+      </h3>
+      <div className="mt-1 divide-y divide-zinc-700">
+        {freelanceJobs.map((job) => (
+          <div key={job.project} className="py-1.5 first:pt-0 last:pb-0">
+            <h4 className="text-zinc-100 font-medium leading-snug">
+              {job.project}
               {job.client ? (
-                <>
-                  <p className="text-zinc-500">-</p>
-                  <p className="text-zinc-300">{job.client}</p>
-                </>
+                <span className="text-zinc-400 font-normal">
+                  {" "}
+                  · {job.client}
+                </span>
               ) : null}
-            </div>
-            <p className="text-zinc-400 text-sm">{job.description}</p>
+            </h4>
+            <p className="text-zinc-400 text-sm leading-snug">
+              <Metrics text={job.description} />
+            </p>
             <div className="mt-1 flex flex-wrap gap-1">
-              {job.skills.map((skill, skillIndex) => (
-                <SkillTag key={skillIndex} skill={skill} size="xs" />
+              {job.skills.map((skill) => (
+                <SkillTag key={skill} skill={skill} size="xs" />
               ))}
             </div>
           </div>

@@ -17,6 +17,8 @@ export const myInfo = {
   tagline:
     "I lead 0→1 growth bets at Leap Finance: new acquisition channels, a counsellor marketplace and funnels built from scratch, all measured in revenue.",
   image: "/personal.jpg",
+  availability: "Open to new roles",
+  languages: ["English", "Hindi"],
   skills: [
     {
       name: "Excel",
@@ -101,8 +103,11 @@ export const myInfo = {
         company: "Leap Finance",
         location: "Bengaluru, India",
         dateRange: "Jul 2026 - Present",
-        description:
-          "Led 0→1 Yocket Elite masterclasses: ₹47L revenue at 58% lower CAC. Built a 0→1 counsellor marketplace: ₹36L in month one (20% L2A vs 11% BAU). Lead quality 12% → 37%.",
+        highlights: [
+          "₹47L revenue from 0→1 Yocket Elite masterclasses, at 58% lower CAC",
+          "₹36L in month one from a 0→1 counsellor marketplace (20% L2A vs 11% BAU)",
+          "Lead quality up from 12% → 37%",
+        ],
         skills: [
           "Growth Strategy",
           "Performance Marketing",
@@ -117,8 +122,10 @@ export const myInfo = {
         company: "Leap Finance",
         location: "Bengaluru, India",
         dateRange: "Jan 2026 - Jun 2026",
-        description:
-          "Branch performance 32% → 80%+ and NPS 7.2 → 8.4. EU LangSchool attach rate 10% → 26%, ₹12L in month one.",
+        highlights: [
+          "Branch performance 32% → 80%+, NPS 7.2 → 8.4",
+          "EU LangSchool attach rate 10% → 26%, ₹12L in month one",
+        ],
         skills: ["Growth Strategy", "BranchOps", "0→1 Launch"],
       },
     ] satisfies Experience[],

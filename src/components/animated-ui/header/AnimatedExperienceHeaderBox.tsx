@@ -1,6 +1,7 @@
 import { BriefcaseBusiness } from "lucide-react";
 import { AnimatedBox } from "../AnimatedBox";
 import { myInfo } from "../../../assets/data";
+import { Metrics } from "../../ui/Metrics";
 
 export const AnimatedExperienceHeaderBox = () => {
   return (
@@ -9,7 +10,9 @@ export const AnimatedExperienceHeaderBox = () => {
         <h2 className="text-4xl font-medium leading-tight flex items-center gap-3">
           <BriefcaseBusiness className="size-8 text-zinc-400" /> Experience
         </h2>
-        <p className="text-zinc-300">{myInfo.experience.intro}</p>
+        <p className="text-zinc-300">
+          <Metrics text={myInfo.experience.intro} />
+        </p>
       </div>
     </AnimatedBox>
   );

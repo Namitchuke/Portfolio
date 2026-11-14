@@ -22,12 +22,20 @@ export const AnimatedTitleHeaderBox = () => {
         <p className="text-zinc-300 text-sm lg:text-base leading-relaxed mb-5">
           {myInfo.tagline}
         </p>
-        <button
-          className="flex items-center gap-1 text-teal-300 hover:underline"
-          onClick={() => setActiveSection("contact")}
-        >
-          Contact me <FiArrowRight />
-        </button>
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
+          <button
+            className="rounded-full bg-teal-400 px-4 py-1.5 text-sm font-semibold text-zinc-900 hover:bg-teal-300 transition-colors cursor-pointer"
+            onClick={() => setActiveSection("projects")}
+          >
+            View projects
+          </button>
+          <button
+            className="flex items-center gap-1 text-teal-300 hover:underline cursor-pointer"
+            onClick={() => setActiveSection("contact")}
+          >
+            Contact me <FiArrowRight />
+          </button>
+        </div>
       </div>
     </AnimatedBox>
   );

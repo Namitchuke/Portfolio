@@ -1,7 +1,8 @@
-import { CopyIcon, MailIcon } from "lucide-react";
+import { MailIcon } from "lucide-react";
 import { AnimatedBox } from "../AnimatedBox";
 import { myInfo } from "../../../assets/data";
 import { BsWhatsapp } from "react-icons/bs";
+import { CopyButton } from "../../ui/CopyButton";
 
 export const AnimatedContactHeaderBox = () => {
   const contactOptions = [
@@ -27,7 +28,7 @@ export const AnimatedContactHeaderBox = () => {
           {contactOptions.map((option, idx) => (
             <div
               key={idx}
-              className="flex items-center gap-3 p-2 rounded bg-zinc-800 hover:bg-zinc-700 transition group cursor-pointer"
+              className="flex items-center gap-3 p-2 rounded bg-zinc-700/40 hover:bg-zinc-700 transition"
             >
               <a
                 href={option.link}
@@ -39,15 +40,7 @@ export const AnimatedContactHeaderBox = () => {
                 <span className="text-xl">{option.icon}</span>
                 <span className="truncate">{option.value}</span>
               </a>
-              <button
-                className="ml-2 p-1 rounded hover:bg-zinc-600 transition cursor-pointer"
-                title={`Copy ${option.label}`}
-                onClick={() => {
-                  navigator.clipboard.writeText(option.value);
-                }}
-              >
-                <CopyIcon className="size-6 text-zinc-400" />
-              </button>
+              <CopyButton value={option.value} label="phone number" />
             </div>
           ))}
         </div>

@@ -1,11 +1,10 @@
-import { motion } from "framer-motion";
 import { AnimatedHeaderBox } from "./animated-ui/AnimatedHeaderBox";
 import { BiDownload } from "react-icons/bi";
 import { MobileNav } from "./MobileNav";
 import { AnimatedSocialsBox } from "./animated-ui/AnimatedSocialsBox";
 import { AnimatedEmailBox } from "./animated-ui/AnimatedEmailBox";
 import { AnimatedLocationBox } from "./animated-ui/AnimatedLocationBox";
-import { AnimatedLanguagesBox } from "./animated-ui/AnimatedLanguagesBox";
+import { AnimatedStatusBox } from "./animated-ui/AnimatedStatusBox";
 import { AnimatedSkillsBox } from "./animated-ui/AnimatedSkillsBox";
 import { useSectionContext } from "../hooks/useSectionContext";
 import { AnimatedSnapshotBox } from "./animated-ui/AnimatedSnapshotBox";
@@ -16,11 +15,10 @@ import { AnimatedFreelanceBox } from "./animated-ui/AnimatedFreelanceBox";
 import { AnimatedEducationBox } from "./animated-ui/AnimatedEducationBox";
 import { AnimatedProjectsBox } from "./animated-ui/AnimatedProjectsBox";
 import { AnimatedRightLeftBox } from "./animated-ui/AnimatedRightLeftBox";
-import { useBoundedCounter } from "../hooks/useBoundedCounter";
 
 export const MobileColumn = () => {
   return (
-    <motion.div className="z-10 w-full max-w-md md:hidden flex flex-col gap-5 px-6 pt-5 pb-28">
+    <div className="z-10 w-full max-w-md md:hidden flex flex-col gap-5 px-6 pt-5 pb-28">
       <header className="flex items-center justify-between">
         <span className="font-semibold tracking-wide">{myInfo.name}</span>
         <a
@@ -33,31 +31,24 @@ export const MobileColumn = () => {
       </header>
       <ContentBox />
       <MobileNav />
-    </motion.div>
+    </div>
   );
 };
 
 const ContentBox = () => {
   const { activeSection } = useSectionContext();
 
-  const { value, next, previous } = useBoundedCounter(
-    0,
-    0,
-    myInfo.projects.length - 1
-  );
-
   if (activeSection === "home" || activeSection === "contact") {
     return (
       <>
         <AnimatedHeaderBox />
-
+        <AnimatedStatusBox />
+        <AnimatedSkillsBox />
+        <AnimatedEmailBox />
+        <AnimatedLocationBox />
         <div className="flex w-full gap-4">
           <AnimatedSocialsBox />
         </div>
-        <AnimatedSkillsBox />
-        <AnimatedLocationBox />
-        <AnimatedEmailBox />
-        <AnimatedLanguagesBox />
       </>
     );
   }
@@ -105,8 +96,8 @@ const ContentBox = () => {
   if (activeSection === "projects") {
     return (
       <>
-        <AnimatedProjectsBox currentProjectId={value} />
-        <AnimatedRightLeftBox onLeftClick={previous} onRightClick={next} />
+        <AnimatedProjectsBox />
+        <AnimatedRightLeftBox />
       </>
     );
   }

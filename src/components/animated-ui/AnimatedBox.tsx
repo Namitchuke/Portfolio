@@ -19,12 +19,12 @@ export function AnimatedBox({
       exit="exit"
       transition={{
         type: "spring",
-        mass: 3,
-        stiffness: 400,
-        damping: 50,
+        mass: 1,
+        stiffness: 420,
+        damping: 34,
       }}
       className={twMerge(
-        "bg-zinc-800 border border-zinc-700 rounded-lg p-6 col-span-1",
+        "bg-zinc-800 border border-zinc-700 rounded-lg p-6 col-span-1 transition-colors hover:border-zinc-500",
         className
       )}
       {...rest}
@@ -36,8 +36,8 @@ export function AnimatedBox({
 
 const boxVariants: Variants = {
   initial: {
-    scale: 0.5,
-    y: 50,
+    scale: 0.85,
+    y: 24,
     opacity: 0,
   },
   animate: {

@@ -9,90 +9,37 @@ import { PiStudentFill } from "react-icons/pi";
 import { FaCode } from "react-icons/fa";
 import { RiContactsBook3Fill } from "react-icons/ri";
 import { BiDownload } from "react-icons/bi";
+import type { Section } from "../../context/SectionContext";
+
+const menuItems: { id: Section; label: string; icon: React.ReactNode }[] = [
+  { id: "home", label: "Home", icon: <IoHome /> },
+  { id: "about", label: "About", icon: <TbUserScan /> },
+  { id: "experience", label: "Experience", icon: <MdWork /> },
+  { id: "education", label: "Education", icon: <PiStudentFill /> },
+  { id: "projects", label: "Projects", icon: <FaCode /> },
+  { id: "contact", label: "Contact", icon: <RiContactsBook3Fill /> },
+];
 
 export const AnimatedMenuBox = () => {
   const { activeSection, setActiveSection } = useSectionContext();
 
-  const menuItems = [
-    {
-      id: "home",
-      label: "Home",
-      icon: <IoHome />,
-      onClick: () => {
-        setActiveSection("home");
-      },
-      flipped: false,
-    },
-    {
-      id: "about",
-      label: "About",
-      icon: <TbUserScan />,
-      onClick: () => {
-        setActiveSection("about");
-      },
-      flipped: true,
-    },
-    {
-      id: "experience",
-      label: "Experience",
-      icon: <MdWork />,
-      onClick: () => {
-        setActiveSection("experience");
-      },
-      flipped: false,
-    },
-    {
-      id: "education",
-      label: "Education",
-      icon: <PiStudentFill />,
-      onClick: () => {
-        setActiveSection("education");
-      },
-      flipped: true,
-    },
-    {
-      id: "projects",
-      label: "Projects",
-      icon: <FaCode />,
-      onClick: () => {
-        setActiveSection("projects");
-      },
-      flipped: false,
-    },
-    {
-      id: "contact",
-      label: "Contact",
-      icon: <RiContactsBook3Fill />,
-      onClick: () => {
-        setActiveSection("contact");
-      },
-      flipped: true,
-    },
-  ];
-
   return (
     <AnimatedBox className="col-span-3 row-span-5 flex flex-col justify-around h-full p-4">
-      <div className="flex flex-col justify-center gap-8 flex-1 mb-4">
-        {menuItems.map((item, index) => (
+      <nav
+        aria-label="Sections"
+        className="flex flex-col justify-center gap-6 flex-1 mb-4"
+      >
+        {menuItems.map((item) => (
           <AnimatedMenuBoxItem
-            key={index}
-            onClick={item.onClick}
+            key={item.id}
+            onClick={() => setActiveSection(item.id)}
             selected={item.id === activeSection}
           >
-            {item.flipped ? (
-              <>
-                {item.label}
-                {item.icon}
-              </>
-            ) : (
-              <>
-                {item.icon}
-                {item.label}
-              </>
-            )}
+            <span className="text-lg">{item.icon}</span>
+            {item.label}
           </AnimatedMenuBoxItem>
         ))}
-      </div>
+      </nav>
       <CvButton />
     </AnimatedBox>
   );
@@ -116,25 +63,26 @@ const AnimatedMenuBoxItem = ({
       onClick={onClick}
       onHoverStart={() => setHovered(true)}
       onHoverEnd={() => setHovered(false)}
-      className={`text-center w-full cursor-pointer px-4 py-3 uppercase font-semibold relative transition-colors duration-150`}
+      aria-current={selected ? "page" : undefined}
+      className="w-full cursor-pointer px-5 py-3 uppercase text-sm font-semibold tracking-wide relative"
     >
       <motion.span
         animate={{
           opacity: hovered || selected ? 1 : 0,
-          scale: hovered || selected ? 1 : 0,
+          scale: hovered || selected ? 1 : 0.6,
         }}
-        transition={{ duration: 0.1 }}
+        transition={{ duration: 0.12 }}
         className={`absolute inset-0 w-full h-full rounded-full pointer-events-none ${
-          selected && !hovered ? "bg-zinc-300" : "bg-zinc-200"
+          selected ? "bg-zinc-200" : "bg-zinc-600"
         }`}
       />
-      <motion.div
-        animate={{ scale: hovered || selected ? 1.1 : 1 }}
-        transition={{ duration: 0.1 }}
-        className="h-full mix-blend-difference relative z-10 flex justify-between items-center w-full px-4"
+      <span
+        className={`relative z-10 flex items-center gap-3 transition-colors duration-100 ${
+          selected ? "text-zinc-900" : "text-zinc-100"
+        }`}
       >
         {children}
-      </motion.div>
+      </span>
     </motion.button>
   );
 };

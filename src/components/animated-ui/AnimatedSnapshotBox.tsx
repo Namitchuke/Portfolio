@@ -15,7 +15,7 @@ export const AnimatedSnapshotBox = () => {
               key={index}
               className="text-center p-4 hover:bg-zinc-700 transition rounded-md"
             >
-              <div className="text-2xl font-bold text-zinc-100">
+              <div className="text-2xl font-bold text-teal-300 tabular-nums">
                 {item.label}
               </div>
               <div className="text-sm text-zinc-400">{item.value}</div>
